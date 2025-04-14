@@ -1,0 +1,170 @@
+.footer {
+  background-color: #e4edf6;
+  padding: 2rem;
+  color: #333;
+  height: 55vh;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  border-bottom: 1px dotted #ccc;
+  padding-bottom: 2rem;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-box {
+  background-color: #007b8f;
+  padding: 0.4rem;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.doctor-icon {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.footer-text {
+  color: #007b8f;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.logo-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.footer-section p {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #514D4D;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #090914;
+}
+
+.newsletter-section input {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #e4e4e7;
+}
+
+.newsletter-section input::placeholder{
+  color: #a1a1aa;
+}
+
+.newsletter-section button {
+  width: 100%;
+  background-color: #2394a7;
+  color: white;
+  padding: 0.6rem;
+  border: none;
+  font-size: 0.8rem;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #333;
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-section {
+    flex: 1 1 100%; 
+    min-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .footer-section ul li{
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+    cursor: pointer;
+    font-weight: normal;
+  }
+  .footer-section .footer-para {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+
+  .footer-brand {
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-row {
+    margin-bottom: 0.75rem;
+  }
+
+  .logo-description {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+  }
+
+  .newsletter-section input {
+    width: 100%;
+    margin-bottom: 0.75rem;
+  }
+
+  .newsletter-section button {
+    width: 100%;
+  }
+
+  .footer-bottom {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+}

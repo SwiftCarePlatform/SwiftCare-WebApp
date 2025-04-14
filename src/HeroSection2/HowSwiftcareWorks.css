@@ -1,0 +1,82 @@
+.how-swiftcare-section {
+    padding: 6rem 8rem;
+    background-color: #fafafa;
+  }
+  
+  .how-swiftcare-container {
+    display: flex;
+    gap: 1.75rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .how-swiftcare-left {
+    width: 596px;
+    max-width: 100%;
+  }
+  
+  .how-swiftcare-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+  }
+  
+  .how-swiftcare-title .highlight {
+    color: #0d9488; 
+  }
+  
+  .how-swiftcare-description {
+    font-size: 1rem;
+    color: #525252; 
+    margin-bottom: 1.75rem;
+  }
+  
+  .how-swiftcare-button {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #0d9488;
+    background-color: #f1f5f9; 
+    border: 1px solid #0d9488;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .how-swiftcare-button:hover {
+    background-color: #e0f2f1;
+  }
+  
+  .how-swiftcare-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 491px;
+    max-width: 100%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .how-swiftcare-section {
+      padding: 6rem 1.5rem;
+    }
+  
+    .how-swiftcare-container {
+      flex-direction: column;
+    }
+  
+    .how-swiftcare-left,
+    .how-swiftcare-right {
+      width: 100%;
+    }
+
+    .how-swiftcare-title{
+      margin-top: -60px;
+      font-size: 1.7rem;
+    }
+    .how-swiftcare-description{
+    
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,41 @@
+.features-section {
+  padding: 3rem 7rem; 
+  background: linear-gradient(to left, #208E90, #09292A);
+}
+.gradient{
+  background: linear-gradient(to bottom, #208E90, #09292A);
+}
+  .features-wrapper {
+    margin: 0 auto;
+    max-width: 1202px;
+  }
+  
+  .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    justify-content: flex-start;
+  }
+  
+.feature-icon {
+  font-size: 1.5rem;
+  color: #208E90;
+  text-align: center;
+}
+
+
+  
+  @media (max-width: 768px) {
+    .features-grid {
+      justify-content: center;
+    }
+  
+    .features-section {
+      padding: 2rem;
+    }
+  }
+
+
+
+  

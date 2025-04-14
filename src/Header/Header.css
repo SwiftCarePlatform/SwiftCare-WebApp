@@ -1,0 +1,141 @@
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem; 
+    padding-right: 7rem; 
+    padding-bottom: 1.75rem; 
+    padding-left: 8rem; 
+    width: 100%;
+    background-color: white;
+    height: 119px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.04);
+  }
+  
+
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1201px; 
+  }
+
+  
+
+  .navigation {
+    display: flex;
+    gap: 3rem; 
+    align-items: flex-start;
+  }
+  
+  .nav-link {
+    font-size: 0.875rem; 
+    line-height: 1.5rem; 
+    color: #6C6C6C; 
+    text-decoration: none;
+  }
+
+  
+
+  .auth-buttons {
+    display: flex;
+    gap: 0.625rem; 
+    align-items: center;
+  }
+  
+
+  .login-btn {
+    padding: 0.625rem 1rem; 
+    font-size: 0.875rem; 
+    font-weight: 500; 
+    color: #14b8a6;
+    border-radius: 10px; 
+    border: 1px solid #208E90; 
+    background-color: #E9F4F4; 
+    width: 106px;
+    cursor: pointer;
+  }
+  
+
+  .register-btn {
+    padding: 0.625rem 1rem; 
+    font-size: 0.875rem; 
+    font-weight: 500; 
+    color: #ffffff;
+    background-color: #208E90; 
+    border-radius: 10px; 
+    width: 106px; 
+    border: none;
+    cursor: pointer;
+  }
+
+  .auth-buttons.mobile-auth {
+    display: none;
+  }
+
+
+
+
+
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  color: #208E90;
+}
+
+
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 2rem;
+    height: auto;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .navigation.active {
+    display: flex;
+  }
+
+  .auth-buttons.desktop-auth {
+    display: none;
+  }
+
+  .auth-buttons.mobile-auth {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+}
+
+
+
+
+  
+
+  

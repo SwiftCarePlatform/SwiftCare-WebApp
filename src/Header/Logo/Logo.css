@@ -1,0 +1,27 @@
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    gap: 10px; 
+  }
+  
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .header-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: #208e90; 
+    line-height: 1.5;
+  }
+  
