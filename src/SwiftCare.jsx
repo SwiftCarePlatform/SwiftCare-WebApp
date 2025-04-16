@@ -9,6 +9,7 @@ import WhySwiftCare from "./Feature2/WhySwiftCare";
 import FAQ from "./FAQ/Faq";
 import Footer from "./Footer/Footer";
 import PartnersGrid from "./PartnersGrid/PartnersGrid";
+import ScrollToTop from "./Scroll/ScrollToTop";
 
 const SwiftCare = () => {
 
@@ -76,6 +77,8 @@ const SwiftCare = () => {
       >
         <Footer />
       </Section>
+
+      <ScrollToTop/>
     </>
   );
 };
