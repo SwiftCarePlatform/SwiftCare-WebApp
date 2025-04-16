@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 import FeatureCard from "./FeatureCard";
 import ExploreButton from  "./ExploreButton";
 import "./FeaturesSection.css";
-import { FaChartLine, FaPhone, FaCreditCard, FaBrain, FaStar, FaUsers, FaLock } from 'react-icons/fa6';
+import {  FaPhone,  FaBrain,  FaUsers, FaLock } from 'react-icons/fa6';
 import { IoVideocam } from "react-icons/io5";
 
 
@@ -14,42 +14,27 @@ const features = [
   {
     icon: <IoVideocam  className='feature-icon'/>,
     title: "Virtual Medical Consultation",
-    description: "Convenient, remote access to medical professionals.",
+    description: "Expert care from the comfort of home.",
   },
   {
     icon: <FaPhone className='feature-icon' />,
     title: "Emergency Helpline Integration",
-    description: "Convenient, remote access to medical professionals.",
+    description: "Immediate help, day or night.",
   },
   {
     icon: <FaBrain className="feature-icon"/>,
     title: "Mental Health Therapy Services",
-    description: "Convenient, remote access to medical professionals.",
+    description: "Your journey to emotional wellness starts here.",
   },
   {
     icon: <FaUsers className="feature-icon"/>,
     title: "Peer group support",
-    description: "Convenient, remote access to medical professionals.",
-  },
-  {
-    icon: <FaChartLine className="feature-icon"/>,
-    title: "Personalized dashboard",
-    description: "Convenient, remote access to medical professionals.",
-  },
-  {
-    icon: <FaCreditCard className="feature-icon"/>,
-    title: "Payment and billing",
-    description: "Convenient, remote access to medical professionals.",
-  },
-  {
-    icon: <FaStar className="feature-icon"/>,
-    title: "Feedback and rating system",
-    description: "Convenient, remote access to medical professionals.",
+    description: "Strength in shared stories.",
   },
   {
     icon: <FaLock className="feature-icon"/>,
     title: "Secure Data storage and privacy",
-    description: "Convenient, remote access to medical professionals.",
+    description: "Your trust is our priority.",
   },
 ];
 
@@ -59,7 +44,6 @@ function FeaturesSection() {
       <div className="features-wrapper">
         <SectionHeader
           title="Our features/Services"
-          description="Lorem ipsum dolor sit amet consectetur. Eu id vitae nibh sit ultricies blandit. In lorem molestie mi massa pretium."
         />
 
         <div className="features-grid">

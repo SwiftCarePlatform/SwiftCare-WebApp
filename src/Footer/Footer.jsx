@@ -45,7 +45,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy;{new Date().getFullYear()} All Rights Reserved by ClarityUI</p> 
+        <p>&copy;{new Date().getFullYear()} SwiftCare. All Rights Reserved</p> 
       </div>
     </footer>
   );

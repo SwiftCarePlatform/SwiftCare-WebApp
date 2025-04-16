@@ -9,13 +9,7 @@
     font-weight: bold;
     color: white;
   }
-  
-  .section-description {
-    margin: 0 auto;
-    font-size: 1rem;
-    max-width: 722px;
-    color: #cbd5e1; 
-  }
+
 
   @media (max-width: 768px) {
     .section-title{

@@ -7,6 +7,11 @@
     box-sizing: border-box;
   }
 
+  .feature-card:last-child{
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   
   .feature-icon-wrapper {
     margin-bottom: 0.625rem; 
