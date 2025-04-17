@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import FAQItem from "./Faqitem";
+import FaqItem from "./FAQItem";
+
 import "./FAQ.css";
 
 const Faq = () => {
@@ -62,7 +63,7 @@ const Faq = () => {
 
         <div className="faq-items">
           {faqItems.map((item, index) => (
-            <FAQItem
+            <FaqItem
               key={index}
               question={item.question}
               answer={item.answer}
