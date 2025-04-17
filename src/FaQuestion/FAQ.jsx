@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FAQItem from "./Faqitem";
 import "./FAQ.css";
 
-const FAQ = () => {
+const Faq = () => {
   const faqItems = [
     {
       question: "Is there a free trial available?",
@@ -76,4 +76,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faq;

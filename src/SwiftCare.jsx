@@ -6,10 +6,12 @@ import HeroSection from "./HeroSection/Hero";
 import HowSwiftcareWorks from "./HeroSection2/HowSwiftcareWorks";
 import FeaturesSection from "./Features/FeaturesSection";
 import WhySwiftCare from "./Feature2/WhySwiftCare";
-import FAQ from "./FAQ/Faq";
 import Footer from "./Footer/Footer";
 import PartnersGrid from "./PartnersGrid/PartnersGrid";
 import ScrollToTop from "./Scroll/ScrollToTop";
+import Faq from "./FaQuestion/FAQ";
+
+
 
 const SwiftCare = () => {
 
@@ -55,7 +57,7 @@ const SwiftCare = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: [0.25, 0.8, 0.25, 1], delay: 0.5 }}
       >
-        <FAQ />
+        <Faq  />
       </Section>
 
       <Section
