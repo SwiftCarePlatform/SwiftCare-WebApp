@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
   }
   
   .logo-icon-wrapper {
@@ -10,7 +11,6 @@
     align-items: center;
     width: 40px;
     height: 40px;
-    gap: 10px; 
   }
   
   .logo-icon {
@@ -23,5 +23,10 @@
     font-weight: 700;
     color: #208e90; 
     line-height: 1.5;
+    text-decoration: none;
+  }
+
+  .logo-link{
+    text-decoration: none;
   }
   

@@ -36,9 +36,29 @@
     line-height: 1.5rem; 
     color: #6C6C6C; 
     text-decoration: none;
+    padding-bottom: 4px;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s;
   }
 
   
+  .nav-link.current-state {
+    
+    color: #208E90;
+  }
+
+  .current-state::before {
+    content: '';
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 0;
+    height: 2px;
+    background-color: #208E90;
+}
+
+
 
   .auth-buttons {
     display: flex;
