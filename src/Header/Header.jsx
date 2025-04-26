@@ -104,10 +104,7 @@ const Header = () => {
               <button className="login-btn" onClick={handleLoginClick}>Login</button>
               <button className="register-btn" onClick={handleRegisterClick}>Register</button>
 
-              <button className="login-btn" >
-                Login
-              </button>
-              <button className="register-btn">Register</button>
+            
 
             </div>
           )}
@@ -120,10 +117,7 @@ const Header = () => {
             <button className="login-btn" onClick={handleLoginClick}>Login</button>
             <button className="register-btn" onClick={handleRegisterClick}>Register</button>
 
-            <button className="login-btn">
-              Login
-            </button>
-            <button className="register-btn">Register</button>
+           
 
           </div>
         )}
