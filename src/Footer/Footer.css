@@ -1,5 +1,5 @@
 .footer {
-  background-color: #e4edf6;
+  background-color:#E4E4E7;
   padding: 2rem;
   color: #333;
   height: 55vh;
@@ -12,7 +12,7 @@
   gap: 2rem;
   max-width: 1200px;
   margin: auto;
-  border-bottom: 1px dotted #ccc;
+  border-bottom: 1px dotted #E2E8F0;
   padding-bottom: 2rem;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .footer-box {
-  background-color: #007b8f;
+  background-color:#208E90;
   padding: 0.4rem;
   border-radius: 4px;
   display: flex;
@@ -49,7 +49,7 @@
 }
 
 .footer-text {
-  color: #007b8f;
+  color: #208E90;
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -94,7 +94,7 @@
 
 .newsletter-section button {
   width: 100%;
-  background-color: #2394a7;
+  background-color: #208E90;
   color: white;
   padding: 0.6rem;
   border: none;

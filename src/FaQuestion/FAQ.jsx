@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import FAQItem from "./Faqitem";
+
+import FaqItem from "./FAQItem";
+
 import "./FAQ.css";
 
-const FAQ = () => {
+const Faq = () => {
   const faqItems = [
     {
       question: "Is there a free trial available?",
@@ -62,7 +64,7 @@ const FAQ = () => {
 
         <div className="faq-items">
           {faqItems.map((item, index) => (
-            <FAQItem
+            <FaqItem
               key={index}
               question={item.question}
               answer={item.answer}
@@ -76,4 +78,4 @@ const FAQ = () => {
   );
 };
 
-export default FAQ;
+export default Faq;

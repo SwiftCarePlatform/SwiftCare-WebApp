@@ -3,7 +3,7 @@ import { GoPlusCircle } from "react-icons/go";
 import { PiMinusCircle } from "react-icons/pi";
 import "./FAQItem.css";
 
-const FAQItem = ({ question, answer, isOpen, onToggle }) => {
+const FaqItem = ({ question, answer, isOpen, onToggle }) => {
   return (
     <article className="faq-item">
       <div className="faq-question">
@@ -32,4 +32,4 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   );
 };
 
-export default FAQItem;
+export default FaqItem;
