@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { FaUserMd } from 'react-icons/fa';
+import { useNavigate } from "react-router-dom";
 import "./LogIn.css";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-
+  const navigate = useNavigate();
+  const handleRegisterClick = () => {
+    navigate("/register"); // Navigate to the register page
+  };
   return (
     <div className="login-containerr">
       <div className="login-left-side">
@@ -43,7 +47,7 @@ const Login = () => {
           <div className="login-links">
             <a href="#">Forgot Password?</a>
             <p>
-              New to Swiftcare? <a href="#">Sign up</a>
+              New to Swiftcare? <a href="#" onClick={handleRegisterClick}>Sign up</a>
             </p>
           </div>
         </div>
