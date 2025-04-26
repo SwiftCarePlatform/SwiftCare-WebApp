@@ -2,15 +2,26 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
 import Logo from "./Logo/Logo";
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const handleLoginClick = () => {
+    if (isMobileView) toggleMobileMenu();
+    navigate("/login");
+  }
+
+  const handleRegisterClick = () => {
+    if (isMobileView) toggleMobileMenu();
+    navigate("/register");
+  }
   
   // Handle screen resize
   useEffect(() => {
@@ -55,8 +66,8 @@ const Header = () => {
           {/* Conditionally render auth buttons inside nav for mobile */}
           {isMobileView && (
             <div className="auth-buttons mobile-auth">
-              <button className="login-btn">Login</button>
-              <button className="register-btn">Register</button>
+              <button className="login-btn" onClick={handleLoginClick}>Login</button>
+              <button className="register-btn" onClick={handleRegisterClick}>Register</button>
             </div>
           )}
         </nav>
@@ -64,8 +75,8 @@ const Header = () => {
         {/* Render desktop auth buttons only on larger screens */}
         {!isMobileView && (
           <div className="auth-buttons desktop-auth">
-            <button className="login-btn">Login</button>
-            <button className="register-btn">Register</button>
+            <button className="login-btn" onClick={handleLoginClick}>Login</button>
+            <button className="register-btn" onClick={handleRegisterClick}>Register</button>
           </div>
         )}
       </div>
