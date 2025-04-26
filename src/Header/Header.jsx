@@ -9,17 +9,17 @@ import { useNavigate } from 'react-router-dom';
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
-<<<<<<< HEAD
+
   const navigate = useNavigate();
-=======
+
   // const navigate = useNavigate();
->>>>>>> 5d1b9e69dc186d4cf4217e5b01e457ca36c32402
+
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-<<<<<<< HEAD
+
   const handleLoginClick = () => {
     if (isMobileView) toggleMobileMenu();
     navigate("/login");
@@ -30,13 +30,13 @@ const Header = () => {
     navigate("/register");
   }
   
-=======
+
   // const handleLoginClick = () => {
   //   if (isMobileView) toggleMobileMenu();
   //   navigate("/login");
   // };
 
->>>>>>> 5d1b9e69dc186d4cf4217e5b01e457ca36c32402
+
   // Handle screen resize
   useEffect(() => {
     const handleResize = () => {
@@ -100,15 +100,15 @@ const Header = () => {
           {/* Conditionally render auth buttons inside nav for mobile */}
           {isMobileView && (
             <div className="auth-buttons mobile-auth">
-<<<<<<< HEAD
+
               <button className="login-btn" onClick={handleLoginClick}>Login</button>
               <button className="register-btn" onClick={handleRegisterClick}>Register</button>
-=======
+
               <button className="login-btn" >
                 Login
               </button>
               <button className="register-btn">Register</button>
->>>>>>> 5d1b9e69dc186d4cf4217e5b01e457ca36c32402
+
             </div>
           )}
         </nav>
@@ -116,15 +116,15 @@ const Header = () => {
         {/* Render desktop auth buttons only on larger screens */}
         {!isMobileView && (
           <div className="auth-buttons desktop-auth">
-<<<<<<< HEAD
+
             <button className="login-btn" onClick={handleLoginClick}>Login</button>
             <button className="register-btn" onClick={handleRegisterClick}>Register</button>
-=======
+
             <button className="login-btn">
               Login
             </button>
             <button className="register-btn">Register</button>
->>>>>>> 5d1b9e69dc186d4cf4217e5b01e457ca36c32402
+
           </div>
         )}
       </div>

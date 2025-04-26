@@ -9,8 +9,7 @@ import "./Register.css";
 
 const Register = () => {
   const [phone, setPhone] = useState("");
-  const [showPassword, setShowPassword] = useState(false); // State for toggling password visibility
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false); // State for confirm password visibility
+  
 
 
   return (
