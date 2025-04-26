@@ -4,7 +4,8 @@ import SwiftCare from "./SwiftCare";
 import ConsultPage from "./SubHeader/Consult";
 import HealthSupport from "./SubHeader/Health";
 import Login from "./LoginSection/Login";
-import Register from "./LoginSection/Register";
+import Register from "./LoginSection/register";
+
 import "./index.css"; // Import your global CSS file
 
 const App = () => {
@@ -20,6 +21,5 @@ const App = () => {
     </Router>
   );
 };
-
 
 export default App;
