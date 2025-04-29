@@ -5,13 +5,18 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { FaUserMd } from "react-icons/fa";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { FaArrowRight } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import "./Register.css";
 
 const Register = () => {
   const [phone, setPhone] = useState("");
-  
-
-
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const handleLoginClick = () => {
+    navigate("/login"); // Navigate to the login page
+  }
   return (
     <div className="login-containerr">
       <div className="login-left-side">
@@ -74,24 +79,50 @@ const Register = () => {
           {/* Row for Password */}
           <div className="password-row">
             <label>Password</label>
-            <input type="password" placeholder="Enter your password" required />
+            <div className="password-input-container">
+              <input
+                type={showPassword ? "text" : "password"}
+                className="password-input"
+                placeholder="Minimum 8 characters, 1 number, 1 special character"
+              />
+              <span
+                className="eye-icon"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? <FiEyeOff /> : <FiEye />}
+              </span>
+            </div>
           </div>
 
           {/* Row for Confirm Password */}
           <div className="confirm-password-row">
             <label>Confirm Password</label>
-            <input
-              type="password"
-              placeholder="Re-enter your password"
-              required
-            />
+            <div className="password-input-container">
+              <input
+                type={showConfirmPassword ? "text" : "password"} // Toggle input type
+                className="password-input"
+                placeholder="Re-enter your password"
+                required
+              />
+              <span
+                className="eye-icon"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)} // Toggle visibility
+              >
+                {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+              </span>
+            </div>
           </div>
 
           {/* Submit Button */}
           <button type="submit" className="register-btn">
-            Submit
+            CONTINUE SECURELY <FaArrowRight />
           </button>
         </form>
+        <div className="footerr">
+          <p>
+          Already have an account? <a href="#" onClick={handleLoginClick}>Log in</a>
+          </p>
+        </div>
       </div>
     </div>
   );
