@@ -14,10 +14,7 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // const handleLoginClick = () => {
-  //   if (isMobileView) toggleMobileMenu();
-  //   navigate("/login");
-  // };
+ 
 
   // Handle screen resize
   useEffect(() => {
@@ -53,21 +50,21 @@ const Header = () => {
             }
             onClick={() => isMobileView && toggleMobileMenu()}
           >
-            Consult a doctor
+            Consult a Doctor
           </NavLink>
           <a
             href="#emergency"
             className="nav-link"
             onClick={() => isMobileView && toggleMobileMenu()}
           >
-            Emergency
+            Emergency Helplines
           </a>
           <a
             href="#mental-health"
             className="nav-link"
             onClick={() => isMobileView && toggleMobileMenu()}
           >
-            Mental health
+            Mental Health Services
           </a>
           <NavLink
             to="/health"
@@ -76,7 +73,7 @@ const Header = () => {
             }
             onClick={() => isMobileView && toggleMobileMenu()}
           >
-            Community/health support
+            Community/Health Support
           </NavLink>
 
           {/* Conditionally render auth buttons inside nav for mobile */}
