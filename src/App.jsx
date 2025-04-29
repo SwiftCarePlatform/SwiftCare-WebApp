@@ -10,7 +10,7 @@ import "./index.css"; // Import your global CSS file
 
 const App = () => {
   return (
-    <Router>
+    
       <Routes>
         <Route path="/*" element={<SwiftCare />} />
         <Route path="/consult" element={<ConsultPage />} />
@@ -18,7 +18,7 @@ const App = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
       </Routes>
-    </Router>
+    
   );
 };
 
