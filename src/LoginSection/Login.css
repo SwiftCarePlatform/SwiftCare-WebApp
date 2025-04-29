@@ -93,7 +93,7 @@
 }
 
 .login-form input,
-.login-btnn {
+.log-btns {
 width: 100%;
 max-width: 360px;
 padding: 12px 16px;
@@ -104,14 +104,14 @@ font-size: 0.95rem;
 box-sizing: border-box;
 }
 
-.login-btnn {
+.log-btns{
 background-color: #178c88;
 color: white;
 border: none;
 cursor: pointer;
 }
 
-.login-btnn:hover {
+.log-btns:hover {
 background-color: #126f6c;
 }
 
@@ -207,7 +207,7 @@ font-size: 1.2rem;
     font-size: 1rem;
   }
 
-  .login-btnn {
+  .log-btns {
     font-size: 14px;
     padding: 8px 16px;
   }

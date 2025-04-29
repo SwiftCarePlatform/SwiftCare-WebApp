@@ -90,10 +90,10 @@ const Header = () => {
           {/* Conditionally render auth buttons inside nav for mobile */}
           {isMobileView && (
             <div className="auth-buttons mobile-auth">
-              <button className="login-btn" onClick={handleLoginClick} >
+              <button className="handle-login" onClick={handleLoginClick} >
                 Login
               </button>
-              <button className="register-btn" onClick={handleRegisterClick}>Register</button>
+              <button className="handle-register" onClick={handleRegisterClick}>Register</button>
             </div>
           )}
         </nav>
@@ -101,10 +101,10 @@ const Header = () => {
         {/* Render desktop auth buttons only on larger screens */}
         {!isMobileView && (
           <div className="auth-buttons desktop-auth">
-            <button className="login-btn" onClick={handleLoginClick}>
+            <button className="handle-login" onClick={handleLoginClick}>
               Login
             </button>
-            <button className="register-btn" onClick={handleRegisterClick}>Register</button>
+            <button className="handle-register" onClick={handleRegisterClick}>Register</button>
           </div>
         )}
       </div>

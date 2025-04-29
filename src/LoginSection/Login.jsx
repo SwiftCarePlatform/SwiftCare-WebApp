@@ -42,7 +42,7 @@ const Login = () => {
             </span>
           </div>
 
-          <button className="login-btnn">Log in</button>
+          <button className="log-btns">Log in</button>
 
           <div className="login-links">
             <a href="#">Forgot Password?</a>
