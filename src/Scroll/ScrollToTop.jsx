@@ -4,6 +4,7 @@ import './ScrollToTop.css';
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
+  const [clicked, setClicked] = useState(false);
 
   const toggleVisibility = () => {
     if (window.scrollY > 800) {
@@ -13,12 +14,26 @@ const ScrollToTop = () => {
     }
   };
 
-  const scrollToTop = () => {
+  const handleClick = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    });
+    })
+    setClicked(true);
   };
+
+  useEffect(() => {
+    if (clicked) {
+      const timer = setTimeout(() => {
+        setClicked(false); 
+      }, 7000);
+  
+      return () => clearTimeout(timer);
+    }
+  }, [clicked]);
+  
+
+ 
 
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
@@ -27,8 +42,8 @@ const ScrollToTop = () => {
 
   return (
     visible && (
-      <button className="scroll-to-top" onClick={scrollToTop}>
-        <FaArrowUp />
+      <button className="scroll-to-top" onClick={handleClick}>
+        {!clicked ? <FaArrowUp /> : <span className='scroll'>Scroll to top</span>}
       </button>
     )
   );
