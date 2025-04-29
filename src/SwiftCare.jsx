@@ -9,12 +9,13 @@ import WhySwiftCare from "./Feature2/WhySwiftCare";
 import Footer from "./Footer/Footer";
 import PartnersGrid from "./PartnersGrid/PartnersGrid";
 import ScrollToTop from "./Scroll/ScrollToTop";
+
+import Login from "./LoginSection/Login";
+import Register from "./LoginSection/register";
+
 import Faq from "./FaQuestion/FAQ";
 
-
-
 const SwiftCare = () => {
-
   return (
     <>
       <Header />
@@ -36,7 +37,6 @@ const SwiftCare = () => {
       </Section>
 
       <Section
-   
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: [0.25, 0.8, 0.25, 1], delay: 0.3 }}
@@ -57,7 +57,7 @@ const SwiftCare = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1.2, ease: [0.25, 0.8, 0.25, 1], delay: 0.5 }}
       >
-        <Faq  />
+        <Faq />
       </Section>
 
       <Section
@@ -80,10 +80,9 @@ const SwiftCare = () => {
         <Footer />
       </Section>
 
-      <ScrollToTop/>
+      <ScrollToTop />
     </>
   );
 };
 
 export default SwiftCare;
-

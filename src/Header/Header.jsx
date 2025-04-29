@@ -14,7 +14,10 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
- 
+  // const handleLoginClick = () => {
+  //   if (isMobileView) toggleMobileMenu();
+  //   navigate("/login");
+  // };
 
   // Handle screen resize
   useEffect(() => {

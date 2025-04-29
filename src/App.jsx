@@ -3,7 +3,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SwiftCare from "./SwiftCare";
 import ConsultPage from "./SubHeader/Consult";
 import HealthSupport from "./SubHeader/Health";
+import Login from "./LoginSection/Login";
+import Register from "./LoginSection/register";
 
+import "./index.css"; // Import your global CSS file
 
 const App = () => {
   return (
@@ -12,6 +15,8 @@ const App = () => {
         <Route path="/*" element={<SwiftCare />} />
         <Route path="/consult" element={<ConsultPage />} />
         <Route path="/health" element={<HealthSupport />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
     </Router>
   );
