@@ -8,7 +8,7 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
   const handleRegisterClick = () => {
-    navigate("/register"); // Navigate to the register page
+    navigate("/register"); 
   };
   return (
     <div className="login-containerr">

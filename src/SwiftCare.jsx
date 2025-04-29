@@ -10,9 +10,6 @@ import Footer from "./Footer/Footer";
 import PartnersGrid from "./PartnersGrid/PartnersGrid";
 import ScrollToTop from "./Scroll/ScrollToTop";
 
-import Login from "./LoginSection/Login";
-import Register from "./LoginSection/register";
-
 import Faq from "./FaQuestion/FAQ";
 
 const SwiftCare = () => {
