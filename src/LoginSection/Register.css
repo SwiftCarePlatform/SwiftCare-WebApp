@@ -228,6 +228,25 @@ form {
   font-size: 14px;
 }
 
+
+/* Container for the password input and eye icon */
+.password-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+/* Eye icon styling */
+.eye-icon {
+  position: absolute;
+  right: 10px; /* Position the icon inside the input field */
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+
 /* Submit button styling */
 .register-btn {
   width: 100%;
@@ -243,4 +262,12 @@ form {
 
 .register-btn:hover {
   background-color: #0e4f50;
+}
+.footerr {
+  font-size: 10px;
+  color: #0f8e8e;
+}
+.footerr a {
+  color: #0f8e8e;
+  text-decoration: none;
 }

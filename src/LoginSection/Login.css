@@ -143,7 +143,7 @@ font-size: 1.2rem;
 
 .login-links {
   margin-top: 1rem;
-  text-align: center;
+  /* text-align: center; */
   font-size: 0.9rem;
 }
 
@@ -154,4 +154,61 @@ font-size: 1.2rem;
 
 .login-links a:hover {
   text-decoration: underline;
+}
+
+/* Media query for tablets (768px and below) */
+@media (max-width: 768px) {
+  .login-containerr {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .login-left-side {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .login-right {
+    flex: none;
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+}
+
+/* Media query for mobile devices (480px and below) */
+@media (max-width: 480px) {
+  .login-containerr {
+    padding: 10px;
+  }
+
+  .login-left-side {
+    padding: 10px;
+    display: none!important;
+  }
+
+  .login-right {
+    padding: 10px;
+  }
+
+  .password-input {
+    font-size: 12px;
+    padding: 8px;
+    padding-right: 35px; /* Adjust space for the eye icon */
+  }
+
+  .eye-icon {
+    font-size: 1rem;
+  }
+
+  .login-btnn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }
