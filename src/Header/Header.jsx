@@ -70,13 +70,15 @@ const Header = () => {
           >
             Emergency Helplines
           </a>
-          <a
-            href="#mental-health"
-            className="nav-link"
+          <NavLink
+           to="/mental"
+            className={({ isActive }) =>
+              isActive ? "nav-link current-state" : "nav-link"
+             }
             onClick={() => isMobileView && toggleMobileMenu()}
           >
             Mental Health Services
-          </a>
+          </NavLink>
           <NavLink
             to="/health"
             className={({ isActive }) =>

@@ -4,10 +4,12 @@
     right: 20px;
     background-color: #208E90;  
     border: none;
+    color: #fff;
     padding: 12px 20px;
     font-size: 16px;
     border-radius: 30px; 
     display: flex;
+
     align-items: center;
     justify-content: center;
     cursor: pointer;

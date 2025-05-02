@@ -9,7 +9,6 @@ import WhySwiftCare from "./Feature2/WhySwiftCare";
 import Footer from "./Footer/Footer";
 import PartnersGrid from "./PartnersGrid/PartnersGrid";
 import ScrollToTop from "./Scroll/ScrollToTop";
-
 import Faq from "./FaQuestion/FAQ";
 
 const SwiftCare = () => {
