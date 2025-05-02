@@ -1,10 +1,10 @@
-.login-containerr {
+/* .login-containerr {
   display: flex;
   height: 100vh;
-}
+} */
 
 /* LEFT SECTION */
-.login-left-side {
+/* .login-left-side {
   flex: 1;
   background: linear-gradient(180deg, #208E90, #09292A);
   color: white;
@@ -56,7 +56,7 @@
   font-size: 1rem;
   line-height: 1.6;
   max-width: 350px;
-}
+} */
 
 /* RIGHT SECTION */
 /* .login-right {
@@ -167,7 +167,7 @@ font-size: 1.2rem;
 
 
 /* Right side styling */
-.login-right {
+/* .login-right {
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -183,10 +183,10 @@ font-size: 1.2rem;
   font-size: 20px;
   margin-bottom: 20px;
   color: #333;
-}
+} */
 
 /* Form styling */
-form {
+/* form {
   display: flex;
   flex-direction: column;
 }
@@ -226,29 +226,29 @@ form {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 14px;
-}
+} */
 
 
 /* Container for the password input and eye icon */
-.password-input-container {
+/* .password-input-container {
   position: relative;
   display: flex;
   align-items: center;
-}
+} */
 /* Eye icon styling */
-.eye-icon {
+/* .eye-icon {
   position: absolute;
-  right: 10px; /* Position the icon inside the input field */
-  top: 50%;
+  right: 10px; Position the icon inside the input field */
+  /* top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   color: #666;
   font-size: 1.2rem;
-}
+} */
 
 
 /* Submit button styling */
-.register-btn {
+/* .register-btn {
   width: 100%;
   background-color: #0f8e8e;
   color: white;
@@ -270,4 +270,4 @@ form {
 .footerr a {
   color: #0f8e8e;
   text-decoration: none;
-}
+} */

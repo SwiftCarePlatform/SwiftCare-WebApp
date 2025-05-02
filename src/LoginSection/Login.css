@@ -1,10 +1,5 @@
-.login-containerr {
-  display: flex;
-  height: 100vh;
-}
-
 /* LEFT SECTION */
-.login-left-side {
+/* .login-left-side {
   flex: 1;
   background: linear-gradient(180deg, #208E90, #09292A);
   color: white;
@@ -56,10 +51,10 @@
   font-size: 1rem;
   line-height: 1.6;
   max-width: 350px;
-}
+} */
 
 /* RIGHT SECTION */
-.login-right {
+/* .login-right {
   flex: 1;
   display: flex;
   justify-content: center;
@@ -138,13 +133,13 @@ font-size: 1.2rem;
 
 .password-input::placeholder{
   font-size: 0.75rem;
-}
+} */
 
 
-.login-links {
-  margin-top: 1rem;
+/* .login-links {
+  margin-top: 1rem; */
   /* text-align: center; */
-  font-size: 0.9rem;
+  /* font-size: 0.9rem;
 }
 
 .login-links a {
@@ -154,10 +149,10 @@ font-size: 1.2rem;
 
 .login-links a:hover {
   text-decoration: underline;
-}
+} */
 
 /* Media query for tablets (768px and below) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .login-containerr {
     flex-direction: column;
     padding: 10px;
@@ -180,10 +175,10 @@ font-size: 1.2rem;
   .login-form {
     max-width: 100%;
   }
-}
+} */
 
 /* Media query for mobile devices (480px and below) */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .login-containerr {
     padding: 10px;
   }
@@ -195,15 +190,15 @@ font-size: 1.2rem;
 
   .login-right {
     padding: 10px;
-  }
+  } */
 
-  .password-input {
+  /* .password-input {
     font-size: 12px;
     padding: 8px;
     padding-right: 35px; /* Adjust space for the eye icon */
-  }
+  } */
 
-  .eye-icon {
+  /* .eye-icon {
     font-size: 1rem;
   }
 
@@ -211,4 +206,4 @@ font-size: 1.2rem;
     font-size: 14px;
     padding: 8px 16px;
   }
-}
+} */
