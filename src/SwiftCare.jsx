@@ -9,10 +9,13 @@ import WhySwiftCare from "./Feature2/WhySwiftCare";
 import Footer from "./Footer/Footer";
 import PartnersGrid from "./PartnersGrid/PartnersGrid";
 import ScrollToTop from "./Scroll/ScrollToTop";
+<<<<<<< HEAD
 import Login from "./LoginPage/Login";
 // import Login from "./LoginSection/Login";
 // import Register from "./LoginSection/register";
 
+=======
+>>>>>>> 7aa1fce1e4514694d02493b18571656cf249d086
 import Faq from "./FaQuestion/FAQ";
 
 const SwiftCare = () => {

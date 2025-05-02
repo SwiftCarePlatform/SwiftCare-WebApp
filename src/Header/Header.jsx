@@ -2,24 +2,19 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Logo from "./Logo/Logo";
-import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileView, setIsMobileView] = useState(window.innerWidth <= 768);
-
   const navigate = useNavigate();
-
-  // const navigate = useNavigate();
-
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-
+  
   const handleLoginClick = () => {
     if (isMobileView) toggleMobileMenu();
     navigate("/login");
@@ -29,12 +24,7 @@ const Header = () => {
     if (isMobileView) toggleMobileMenu();
     navigate("/register");
   }
-  
 
-  // const handleLoginClick = () => {
-  //   if (isMobileView) toggleMobileMenu();
-  //   navigate("/login");
-  // };
 
 
   // Handle screen resize
@@ -71,22 +61,24 @@ const Header = () => {
             }
             onClick={() => isMobileView && toggleMobileMenu()}
           >
-            Consult a doctor
+            Consult a Doctor
           </NavLink>
           <a
             href="#emergency"
             className="nav-link"
             onClick={() => isMobileView && toggleMobileMenu()}
           >
-            Emergency
+            Emergency Helplines
           </a>
-          <a
-            href="#mental-health"
-            className="nav-link"
+          <NavLink
+           to="/mental"
+            className={({ isActive }) =>
+              isActive ? "nav-link current-state" : "nav-link"
+             }
             onClick={() => isMobileView && toggleMobileMenu()}
           >
-            Mental health
-          </a>
+            Mental Health Services
+          </NavLink>
           <NavLink
             to="/health"
             className={({ isActive }) =>
@@ -94,18 +86,16 @@ const Header = () => {
             }
             onClick={() => isMobileView && toggleMobileMenu()}
           >
-            Community/health support
+            Community/Health Support
           </NavLink>
 
           {/* Conditionally render auth buttons inside nav for mobile */}
           {isMobileView && (
             <div className="auth-buttons mobile-auth">
-
-              <button className="login-btn" onClick={handleLoginClick}>Login</button>
-              <button className="register-btn" onClick={handleRegisterClick}>Register</button>
-
-            
-
+              <button className="handle-login" onClick={handleLoginClick} >
+                Login
+              </button>
+              <button className="handle-register" onClick={handleRegisterClick}>Register</button>
             </div>
           )}
         </nav>
@@ -113,12 +103,10 @@ const Header = () => {
         {/* Render desktop auth buttons only on larger screens */}
         {!isMobileView && (
           <div className="auth-buttons desktop-auth">
-
-            <button className="login-btn" onClick={handleLoginClick}>Login</button>
-            <button className="register-btn" onClick={handleRegisterClick}>Register</button>
-
-           
-
+            <button className="handle-login" onClick={handleLoginClick}>
+              Login
+            </button>
+            <button className="handle-register" onClick={handleRegisterClick}>Register</button>
           </div>
         )}
       </div>

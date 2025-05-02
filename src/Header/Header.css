@@ -67,7 +67,7 @@
   }
   
 
-  .login-btn {
+  .handle-login{
     padding: 0.625rem 1rem; 
     font-size: 0.875rem; 
     font-weight: 500; 
@@ -80,7 +80,7 @@
   }
   
 
-  .register-btn {
+  .handle-register {
     padding: 0.625rem 1rem; 
     font-size: 0.875rem; 
     font-weight: 500; 
