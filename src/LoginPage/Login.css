@@ -1,0 +1,187 @@
+.Login-page-container {
+  display: flex;
+  height: 100vh;
+}
+
+ /* progressiveSteps */
+ .progressive-container {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.progressive-icon {
+  font-size: 15px;
+  color: #d3d3d3;
+}
+
+.progressive-icon .progressive-active {
+  color: #2ca6a4;
+}
+
+.progressive-line {
+  width: 100px;
+  height: 2px;
+  background-color: #d3d3d3;
+  margin: 0 15px;
+}
+
+
+
+
+
+/* LEFT side */
+.left-side-login{
+  flex: 1;
+  background: linear-gradient(180deg, #0f8e8e, #055d5d);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 103vh;
+  box-sizing: border-box;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+.left-side-text h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.left-side-text p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.left-side-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+.left-side-box{
+  padding: 0.3rem;
+  background-color:#fff ;
+  border-radius: 4px;
+}
+
+.left-side-icon {
+  font-size: 1.5rem;
+  color: #0f8e8e;
+
+}
+
+/* right side  */
+
+.right-side {
+flex: 1;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 0 4rem;
+/* width: 60%; */
+}
+
+.Email-form {
+width: 100%;
+max-width: 400px;
+padding: 2rem;
+}
+
+.Email-form h2 {
+font-size: 1.8rem;
+margin-bottom: 1.5rem;
+}
+
+.Email-form label {
+display: block;
+margin-top: 1rem;
+font-weight: 500;
+margin-bottom: 0.3rem;
+}
+
+.Email-form input {
+width: 100%;
+padding: 0.75rem;
+border: 1px solid #ccc;
+border-radius: 6px;
+font-size: 1rem;
+}
+
+.Email-form input,
+.Email-button {
+width: 100%;
+max-width: 360px;
+padding: 12px 16px;
+margin-bottom: 1rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 0.95rem;
+box-sizing: border-box;
+}
+
+.Email-button {
+background-color: #178c88;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.Email-button:hover {
+background-color: #126f6c;
+}
+
+
+.password-field {
+position: relative;
+width: 100%;
+max-width: 360px;
+}
+
+.password-field input {
+padding-right: 30px; 
+}
+
+.email-icon {
+position: absolute;
+top: 50%;
+right: 12px;
+transform: translateY(-50%);
+cursor: pointer;
+color: #666;
+font-size: 1.2rem;
+}
+
+.password-input::placeholder{
+font-size: 0.75rem;
+}
+
+
+
+.Email-links {
+margin-top: 1rem;
+text-align: center;
+font-size: 0.9rem;
+}
+
+.Email-links a {
+color: #0f8e8e;
+text-decoration: none;
+}
+
+.Email-links a:hover {
+text-decoration: underline;
+}
+
+.error-text {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 5px;
+}
