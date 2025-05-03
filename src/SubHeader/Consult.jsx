@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import "./Consult.css";
-import consultImage from "../assets/consultImage.png";
+import ConsultImage from "../assets/ConsultImage.png";
 import HowSwiftcareWorks from "../HeroSection2/HowSwiftcareWorks";
 import Faq from "../FaQuestion/FAQ";
 import Footer from "../Footer/Footer";
@@ -29,7 +29,7 @@ const ConsultPage = () => {
           <button className="consult-button">Book virtual consultation</button>
         </div>
         <div className="consult-container">
-          <img src={consultImage} alt="Consult Dcotor" className="consult-image" />
+          <img src={ConsultImage} alt="Consult Dcotor" className="consult-image" />
         </div>
       </section>
       </Section>
