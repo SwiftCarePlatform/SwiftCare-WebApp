@@ -5,6 +5,7 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
 import "./Signup.css";
+import { useUser } from "../../UserContext.jsx";
 
 const CreateAccountForm = ({ onNext }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -18,6 +19,7 @@ const CreateAccountForm = ({ onNext }) => {
   const [errors, setErrors] = useState({});
 
   const navigate = useNavigate(); 
+  const { setIsLoggedIn } = useUser(); // Access the setIsLoggedIn function from UserContext
 
   
   const validateForm = () => {
@@ -55,14 +57,15 @@ const CreateAccountForm = ({ onNext }) => {
     if (Object.keys(validationErrors).length > 0) {
       return; // Stop here, don't move forward
     }
-  
-    console.log("Form submitted:", {
-      firstName,
-      lastName,
-      email,
-      phone,
-      password,
-    });
+
+    
+    const userData = { firstName, lastName, email, phone };
+    localStorage.setItem("user", JSON.stringify(userData));
+    console.log("Account created:", userData);
+
+    setIsLoggedIn(true); 
+
+    navigate("/"); // redirect to home page
   
     onNext(); // move to next UI step ONLY when valid
   };

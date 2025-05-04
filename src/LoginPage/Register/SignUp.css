@@ -7,11 +7,17 @@
   margin-top: -5px;
 }
 
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+
 .signup-box {
   padding: 30px;
   max-width: 480px;
   width: 100%;
-  font-family: 'Inter', sans-serif;
 }
 
 .signup-box h1 {
@@ -38,14 +44,14 @@
 }
 
 .name-field {
-  width: 90%;
+  width: 98%;
 }
 .name-fields {
-  width: 89%;
+  width: 100%;
 }
 
 .email-field{
-  width: 94.7%;
+  width: 100%;
 }
 
 .form-group label {
@@ -144,3 +150,62 @@ input,
   font-size: 0.85rem;
   margin-top: 5px;
 }
+
+
+@media (max-width: 768px) {
+  .signup-wrapper {
+    padding: 20px;
+    align-items: flex-start;
+    margin-top: 0;
+  }
+
+  .signup-box {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .signup-box h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr; /* Stack fields vertically */
+    grid-gap: 16px;
+  }
+
+  .form-group {
+    margin-bottom: 16px;
+  }
+
+  input,
+  .phone-input {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .form-button {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  .login-redirect {
+    font-size: 11px;
+    margin-top: 16px;
+  }
+
+  .password-input span {
+    font-size: 16px;
+  }
+
+  .error-text {
+    font-size: 0.75rem;
+  }
+}
+

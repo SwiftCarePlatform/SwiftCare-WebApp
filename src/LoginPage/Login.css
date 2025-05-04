@@ -185,3 +185,61 @@ text-decoration: underline;
   font-size: 0.85rem;
   margin-top: 5px;
 }
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+
+@media (max-width: 768px) {
+ 
+  .left-side-login{
+    display: none;
+  }
+  .right-side{
+    width: 100%;
+    padding: 2rem 1rem;
+  }
+
+  .Email-form {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .Email-form h2 {
+    font-size: 1.5rem;
+  }
+
+  .Email-form input,
+  .Email-button {
+    max-width: 100%;
+  }
+
+  .password-field {
+    max-width: 100%;
+  }
+
+  .progressive-icon {
+    font-size: 12px;
+  }
+
+  .progressive-line {
+    width: 60px;
+    margin: 0 8px;
+  }
+
+  .progressive-container {
+    padding: 0 10px;
+    flex-wrap: nowrap;
+  }
+
+
+
+
+ 
+}
+
+
+

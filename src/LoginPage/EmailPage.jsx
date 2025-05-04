@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import "./Login.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useUser } from "../UserContext";
 
 function EmailPage({ onSignupClick }) {
   const [showPassword, setShowPassword] = useState(false);
@@ -9,7 +10,11 @@ function EmailPage({ onSignupClick }) {
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
 
-  // const navigate = useNavigate();
+
+
+  const navigate = useNavigate();
+  const { setUser } = useUser(); // Access the  setUser Usercontext
+  const { setIsLoggedIn } = useUser(); // Access the setIsLoggedIn function from UserContext
 
   const validateForm = () => {
     const errors = {};
@@ -36,9 +41,25 @@ function EmailPage({ onSignupClick }) {
     setErrors(validationErrors);
 
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Logging in with:", { email, password });
-      // navigate("/home"); // Uncomment if using React Router
+
+       // extract first part from email before '@'
+      let extractedName = email.split("@")[0];
+
+      //Remove numbers and special characters (keep only letters)
+      extractedName = extractedName.replace(/[^a-zA-Z]/g, "");
+
+      // Capitalize the first letter of the extracted name
+      const capitalizedFirstName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+      
+      const userData = { firstName: capitalizedFirstName, email };
+      localStorage.setItem("user", JSON.stringify(userData));
+      setIsLoggedIn(true); // Update the logged-in state
+      setUser(userData); 
+      navigate("/"); // redirect to home page
     }
+
+    
   };
 
   const handleSignup = () => {
