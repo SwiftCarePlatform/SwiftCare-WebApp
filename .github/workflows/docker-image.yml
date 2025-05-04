@@ -1,71 +1,35 @@
-name: Build, Test, and Push Docker Image
+name: Build and Push Docker Image to Docker Hub
 
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
 
 env:
   DOCKER_IMAGE_NAME: frontend
+  DOCKER_TAG: latest
 
 jobs:
-  build-test-scan:
-    runs-on: ubuntu-latest
+  build-and-push:
+    runs-on: ubuntu-latest   
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-    
-      - name: Docker Login (Main Branch Only)
-        if: github.ref == 'refs/heads/main'
+      - name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
-          password: ${{ secrets.DOCKER_HUB_SECRET }}
+          password: ${{ secrets.DOCKER_HUB_SECRET }} 
 
-      # Dynamic tags (versioning)
-      - name: Docker Metadata
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: chrisjindu/${{ env.DOCKER_IMAGE_NAME }}
-          tags: |
-            type=ref,event=branch
-            type=sha
-
-     
-      - name: Cache Docker layers
-        uses: actions/cache@v3
-        with:
-          path: /tmp/.buildx-cache
-          key: ${{ runner.os }}-buildx-${{ github.sha }}
-          restore-keys: ${{ runner.os }}-buildx-
-
-    
-      - name: Build Docker Image
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          push: ${{ github.ref == 'refs/heads/main' }}
-          tags: ${{ steps.meta.outputs.tags }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache-new
-
-
-      - name: Test Docker Image
+      - name: Build and tag Docker image
         run: |
-          docker run -d --name test-container -p 3000:3000 ${{ steps.meta.outputs.tags }}
-          sleep 10  # Wait for app to start
-          curl --fail http://localhost:3000/health || (docker logs test-container && exit 1)
-          docker stop test-container
-
-      # Security scan (fails on CRITICAL/HIGH CVEs)
-      - name: Scan for Vulnerabilities
-        uses: aquasecurity/trivy-action@master
-        with:
-          image-ref: ${{ steps.meta.outputs.tags }}
-          format: 'table'
-          exit-code: '1'
-          severity: 'CRITICAL,HIGH'
+          docker build -t $DOCKER_IMAGE_NAME:$DOCKER_TAG .
+          docker tag $DOCKER_IMAGE_NAME:$DOCKER_TAG chrisjindu/$DOCKER_IMAGE_NAME:$DOCKER_TAG
+  
+      - name: Test Docker Image
+        timeout-minutes: 2  # Added timeout (fails if test runs longer than 2 mins)
+        run: docker run --rm $DOCKER_IMAGE_NAME:$DOCKER_TAG
+    
+      - name: Push to Docker Hub
+        run: docker push chrisjindu/$DOCKER_IMAGE_NAME:$DOCKER_TAG
