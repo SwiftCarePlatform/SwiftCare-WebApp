@@ -4,7 +4,7 @@ import "react-phone-input-2/lib/style.css";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import { FaArrowRight } from "react-icons/fa6";
 import { useNavigate } from "react-router-dom";
-import "./Signup.css";
+import "./SignUp.css";
 
 const CreateAccountForm = ({ onNext }) => {
   const [showPassword, setShowPassword] = useState(false);
