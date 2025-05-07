@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./CartView.css";
 import CartNav from "./CartNav"; 
 // import { div } from "framer-motion/client";
-import ConsultationImage from "../assets/BasicConsultation.jpeg";
-import MentalImage from "../assets/Mentalhealth.avif";
-import CouncelingImage from "../assets/Counceling.jpeg";
-import LegacyImage from "../assets/LegacyMemory.jpeg";
+import DiabetesImage from "../assets/Diabetes.png";
+import GeneralImage from "../assets/General.png";
+import DNAImage from "../assets/DNA.png";
+import FluImage from "../assets/Flu.png";
 
 const initialCartItems = [
   {
@@ -14,7 +15,7 @@ const initialCartItems = [
     description: "Speak with a licensed healthcare provider about general symptoms and physical wellbeing",
     price: 5000,
     quantity: 1,
-    image: ConsultationImage,
+    image: DiabetesImage,
   },
   {
     id: 2,
@@ -22,7 +23,7 @@ const initialCartItems = [
     description: "One-on-one session with a certified therapist to support your mental and emotional well-being",
     price: 5000,
     quantity: 1,
-    image: MentalImage,
+    image: GeneralImage,
   },
   {
     id: 3,
@@ -31,7 +32,7 @@ const initialCartItems = [
       "Find comfort through guided sessions designed to help you process loss and heal",
     price: 5000,
     quantity: 1,
-    image: CouncelingImage,
+    image: DNAImage,
   },
   {
     id: 4,
@@ -40,15 +41,16 @@ const initialCartItems = [
       "Preserve your loved one’s story through audio, video, or written digital keepsakes",
     price: 5000,
     quantity: 1,
-    image: LegacyImage,
+    image: FluImage,
   },
 ];
 
 export default function CartView() {
+  const navigate = useNavigate();
   const [cartItems, setCartItems] = useState(initialCartItems);
   const [promo, setPromo] = useState("");
   const [discount, setDiscount] = useState(0);
-  const [promoApplied, setPromoApplied] = useState(false);
+  const [ setPromoApplied] = useState(false);
 
   const updateQuantity = (id, change) => {
     setCartItems((prevItems) =>
@@ -151,7 +153,7 @@ export default function CartView() {
             <span>#{total.toLocaleString()}</span>
           </div>
         </div>
-        <button className="checkout-button">CHECKOUT</button>
+        <button className="checkout-button" onClick={() => navigate('/checkout')}>CHECKOUT</button>
       </div>
     </div>
     </div>

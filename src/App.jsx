@@ -11,9 +11,10 @@ import ConfirmationEmail from "./LoginPage/Register/ConfirmEmail";
 import RegisterComplete from "./LoginPage/Register/RegisterComplete";
 import NotFoundPage from "./NotFound";
 import { useUser } from "./UserContext.jsx";
-// import { ToastContainer } from "react-toastify"; 
-// import "react-toastify/dist/ReactToastify.css"; 
+import { ToastContainer } from "react-toastify"; 
+import "react-toastify/dist/ReactToastify.css"; 
 import Cart from "./CartPage/CartView.jsx";
+import Checkout from "./Checkout/Checkout"; // Added import statement for Checkout
 
 
 const App = () => {
@@ -35,12 +36,10 @@ const App = () => {
       {/* 404 Not Found Route */}
       <Route path="*" element={<NotFoundPage />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/checkout" element={<Checkout />} />
     </Routes>
     
-
-    {/* Toast notifications will appear at the top center of the screen */}
-
-    {/* <ToastContainer position="top-center" autoClose={5000} />   */}
+    <ToastContainer position="top-center" autoClose={5000} />
     </>
   );
 };
