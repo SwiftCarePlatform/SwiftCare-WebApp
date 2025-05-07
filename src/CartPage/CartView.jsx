@@ -10,35 +10,35 @@ import FluImage from "../assets/Flu.png";
 const initialCartItems = [
   {
     id: 1,
-    title: "Diabetes Checkup Package",
-    description: "Includes blood sugar, cholesterol, and HbA1c tests",
-    price: 90,
+    title: "Basic Consultation",
+    description: "Speak with a licensed healthcare provider about general symptoms and physical wellbeing",
+    price: 5000,
     quantity: 1,
     image: DiabetesImage,
   },
   {
     id: 2,
-    title: "General Health Screening",
-    description: "Includes CBC, urinalysis, liver & kidney function tests",
-    price: 80,
+    title: "Mental Health Therapy",
+    description: "One-on-one session with a certified therapist to support your mental and emotional well-being",
+    price: 5000,
     quantity: 1,
     image: GeneralImage,
   },
   {
     id: 3,
-    title: "DNA Ancestry Test",
+    title: "Grief Counseling",
     description:
-      "Explore your heritage with a full DNA analysis and health risk report",
-    price: 80,
+      "Find comfort through guided sessions designed to help you process loss and heal",
+    price: 5000,
     quantity: 1,
     image: DNAImage,
   },
   {
     id: 4,
-    title: "Flu Vaccine (Quadrivalent)",
+    title: "Legacy & Memories Keeping",
     description:
-      "Annual influenza shot, protects against 4 strains of the flu virus",
-    price: 80,
+      "Preserve your loved one’s story through audio, video, or written digital keepsakes",
+    price: 5000,
     quantity: 1,
     image: FluImage,
   },
@@ -47,6 +47,8 @@ const initialCartItems = [
 export default function CartView() {
   const [cartItems, setCartItems] = useState(initialCartItems);
   const [promo, setPromo] = useState("");
+  const [discount, setDiscount] = useState(0);
+  const [promoApplied, setPromoApplied] = useState(false);
 
   const updateQuantity = (id, change) => {
     setCartItems((prevItems) =>
@@ -66,9 +68,23 @@ export default function CartView() {
     (total, item) => total + item.price * item.quantity,
     0
   );
-  const taxAndFees = 15;
-  const privateServiceFee = 5;
-  const total = subtotal + taxAndFees + privateServiceFee;
+  // const taxAndFees = 15;
+  // const privateServiceFee = 5;
+  // const total = subtotal; 
+  // + taxAndFees + privateServiceFee;
+
+  const handleApplyPromo = () => {
+    if (promo === "DISCOUNT10") {
+      setDiscount(subtotal * 0.1); // Apply a 10% discount
+      setPromoApplied(true);
+    } else {
+      setDiscount(0); // No discount if promo code is invalid
+      setPromoApplied(false);
+      alert("Invalid Promo Code");
+    }
+  };
+
+  const total = subtotal - discount;
 
   return (
     <div>
@@ -85,7 +101,7 @@ export default function CartView() {
                 <p className="item-description">{item.description}</p>
               </div>
               <div className="item-controls">
-                <span className="item-price">${item.price}</span>
+                <span className="item-price">#{item.price}</span>
                 <div className="quantity-controls">
                   <button onClick={() => updateQuantity(item.id, -1)}>-</button>
                   <span>{item.quantity.toString().padStart(2, "0")}</span>
@@ -104,6 +120,7 @@ export default function CartView() {
       </div>
 
       <div className="summary-section">
+      <h2>Order Summary</h2>
         <div className="promo-section">
           <input
             type="text"
@@ -111,26 +128,27 @@ export default function CartView() {
             value={promo}
             onChange={(e) => setPromo(e.target.value)}
           />
-          <button className="apply-button">Apply</button>
+          <button className="apply-button" onClick={handleApplyPromo}>Apply</button>
         </div>
         <div className="summary-details">
           <div className="summary-row">
             <span>Subtotal</span>
-            <span>${subtotal.toFixed(2)}</span>
+            <span>#{subtotal.toLocaleString()}</span>
           </div>
           <div className="summary-row">
-            <span>Tax and Fees</span>
-            <span>${taxAndFees.toFixed(2)}</span>
+            <span>Discount</span>
+            <span>#{discount.toLocaleString()}</span>
           </div>
-          <div className="summary-row">
+          {/* <div className="summary-row">
             <span>Private service</span>
-            <span>${privateServiceFee.toFixed(2)}</span>
-          </div>
+            <span>#{privateServiceFee.toFixed(2)}</span>
+          </div> */}
           <div className="summary-row total">
             <span>
-              Total ({cartItems.reduce((acc, i) => acc + i.quantity, 0)} items)
+              Total
+             
             </span>
-            <span>${total.toFixed(2)}</span>
+            <span>#{total.toLocaleString()}</span>
           </div>
         </div>
         <button className="checkout-button">CHECKOUT</button>
