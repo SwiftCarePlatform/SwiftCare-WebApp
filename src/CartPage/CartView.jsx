@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./CartView.css";
 import CartNav from "./CartNav"; 
 // import { div } from "framer-motion/client";
@@ -45,6 +46,7 @@ const initialCartItems = [
 ];
 
 export default function CartView() {
+  const navigate = useNavigate();
   const [cartItems, setCartItems] = useState(initialCartItems);
   const [promo, setPromo] = useState("");
   const [discount, setDiscount] = useState(0);
@@ -151,7 +153,7 @@ export default function CartView() {
             <span>#{total.toLocaleString()}</span>
           </div>
         </div>
-        <button className="checkout-button">CHECKOUT</button>
+        <button className="checkout-button" onClick={() => navigate('/checkout')}>CHECKOUT</button>
       </div>
     </div>
     </div>
