@@ -4,8 +4,9 @@ import "./Header.css";
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "./Logo/Logo";
 import { useUser } from "../UserContext"; 
-import { toast } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+// import { toast } from "react-toastify";
+// import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -95,7 +96,6 @@ const Header = () => {
           >
             Community/Health Support
           </NavLink>
-
 
 
           {/* Mobile Auth Buttons */}
