@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import "./CartView.css";
 import CartNav from "./CartNav"; 
 // import { div } from "framer-motion/client";
-import DiabetesImage from "../assets/Diabetes.png";
-import GeneralImage from "../assets/General.png";
-import DNAImage from "../assets/DNA.png";
-import FluImage from "../assets/Flu.png";
+import ConsultationImage from "../assets/BasicConsultation.jpeg";
+import MentalImage from "../assets/Mentalhealth.avif";
+import CouncelingImage from "../assets/Counceling.jpeg";
+import LegacyImage from "../assets/LegacyMemory.jpeg";
 
 const initialCartItems = [
   {
@@ -14,7 +14,7 @@ const initialCartItems = [
     description: "Speak with a licensed healthcare provider about general symptoms and physical wellbeing",
     price: 5000,
     quantity: 1,
-    image: DiabetesImage,
+    image: ConsultationImage,
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const initialCartItems = [
     description: "One-on-one session with a certified therapist to support your mental and emotional well-being",
     price: 5000,
     quantity: 1,
-    image: GeneralImage,
+    image: MentalImage,
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const initialCartItems = [
       "Find comfort through guided sessions designed to help you process loss and heal",
     price: 5000,
     quantity: 1,
-    image: DNAImage,
+    image: CouncelingImage,
   },
   {
     id: 4,
@@ -40,7 +40,7 @@ const initialCartItems = [
       "Preserve your loved one’s story through audio, video, or written digital keepsakes",
     price: 5000,
     quantity: 1,
-    image: FluImage,
+    image: LegacyImage,
   },
 ];
 
