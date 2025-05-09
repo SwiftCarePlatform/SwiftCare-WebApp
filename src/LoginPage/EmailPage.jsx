@@ -11,6 +11,10 @@ function EmailPage({ onSignupClick }) {
   const [errors, setErrors] = useState({});
 
 
+  const handleForgotPassword = (e) => {
+    e.preventDefault();
+    navigate("/forgotpage"); // navigate to forgot password page
+  };
 
   const navigate = useNavigate();
   const { setUser } = useUser(); // Access the  setUser Usercontext
@@ -100,7 +104,7 @@ function EmailPage({ onSignupClick }) {
       <button className="Email-button">Log in</button>
 
       <div className="Email-links">
-        <a href="#">Forgot Password?</a>
+        <a href="#" onClick={handleForgotPassword}>Forgot Password?</a>
         <p>
           New to Swiftcare?{" "}
           <a href="#" onClick={handleSignup}>

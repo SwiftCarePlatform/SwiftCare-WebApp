@@ -80,12 +80,12 @@ const CreateAccountForm = ({ onNext }) => {
   };
 
   return (
-    <div className="signup-wrapper">
-      <div className="signup-box">
+    <div className="signups-wrapper">
+      <div className="signups-box">
         <h1>Create Your Account</h1>
 
-        <div className="form-row">
-          <div className="form-group name-field">
+        <div className="rows-form">
+          <div className="form-groups first-field">
             <label>First name</label>
             <input
               type="text"
@@ -96,7 +96,7 @@ const CreateAccountForm = ({ onNext }) => {
             {errors.firstName && <p className="error-text">{errors.firstName}</p>}
           </div>
 
-          <div className="form-group name-fields">
+          <div className="form-groups last-field">
             <label>Last name</label>
             <input 
               type="text" 
@@ -108,7 +108,7 @@ const CreateAccountForm = ({ onNext }) => {
           </div>
         </div>
 
-        <div className="form-group  email-field">
+        <div className="form-groups  email-field">
           <label>Email</label>
           <input 
             type="email" 
@@ -119,7 +119,7 @@ const CreateAccountForm = ({ onNext }) => {
           {errors.email && <p className="error-text">{errors.email}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-groups">
           <label>Phone number</label>
           <PhoneInput
             country={"ng"}
@@ -131,7 +131,7 @@ const CreateAccountForm = ({ onNext }) => {
           {errors.phone && <p className="error-text">{errors.phone}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-groups">
           <label>Password</label>
           <div className="password-input">
             <input
@@ -147,7 +147,7 @@ const CreateAccountForm = ({ onNext }) => {
           {errors.password && <p className="error-text">{errors.password}</p>}
         </div>
 
-        <div className="form-group">
+        <div className="form-groups">
           <label>Confirm Password</label>
           <div className="password-input">
             <input

@@ -31,8 +31,11 @@ const Header = () => {
     if (!user) {
       e.preventDefault(); // stop the NavLink navigation
       toast.warning("You need to log in to access Consult Page.");
+      if (isMobileView) toggleMobileMenu();
+      return;
     }
     if (isMobileView) toggleMobileMenu();
+
   };
 
   useEffect(() => {
@@ -100,7 +103,7 @@ const Header = () => {
 
           {/* Mobile Auth Buttons */}
           {isMobileView && (
-              <div className="cart-icons" title="Cart">
+              <div className="cart-icons">
               <FaShoppingCart
                 size={22}
                 className="cart-icon"
@@ -123,7 +126,7 @@ const Header = () => {
                 </div>
               ) : (
                 <>
-                  <button className="handle-login" onClick={handleLoginClick}>
+                  <button className="handle-login mobile-login" onClick={handleLoginClick}>
                     Login
                   </button>
                   <button className="handle-register" onClick={handleRegisterClick}>

@@ -12,7 +12,7 @@ const HowSwiftcareWorks = () => {
     {
       title: "Choose a service ~ Medical & Grief",
       description:
-        "Select medical care, grief couseling, or both.",
+        "Select medical care, grief counseling, or both.",
     },
     {
       title: "Connect Instantly/Schedule Support",

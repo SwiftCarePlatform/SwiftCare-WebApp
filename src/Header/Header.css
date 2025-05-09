@@ -183,6 +183,9 @@
     align-items: center;
     position: relative;
   }
+  .mobile-login{
+    margin-right: 10px;
+  }
 }
 
 

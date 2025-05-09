@@ -14,6 +14,8 @@ import { useUser } from "./UserContext.jsx";
 import { ToastContainer } from "react-toastify"; 
 import "react-toastify/dist/ReactToastify.css"; 
 
+import ForgotPasswordPage from "./PasswordRecovery/ForgotPage.jsx";
+
 
 const App = () => {
 
@@ -30,6 +32,8 @@ const App = () => {
       <Route path="/register" element={<CreateAccountForm />} />
       <Route path="/register/confirm" element={<ConfirmationEmail />} />
       <Route path="/register/complete" element={<RegisterComplete />} />
+      <Route path="/forgotpage" element={<ForgotPasswordPage />} />
+
 
       {/* 404 Not Found Route */}
       <Route path="*" element={<NotFoundPage />} />

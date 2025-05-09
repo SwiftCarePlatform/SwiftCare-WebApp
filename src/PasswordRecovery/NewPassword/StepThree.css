@@ -1,0 +1,112 @@
+.reset-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+   
+}
+
+.new-password{
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+.new-password-box{
+    padding: 0.4rem;
+    background-color: #fff;
+    border-radius: 4px;
+}
+.new-password-icon{
+    font-size: 1.5rem;
+    color: #208E90;   
+}
+
+.new-password-text{
+    margin-block-start: 360px;
+}
+.new-password-text h2{
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 100%;
+}
+.new-password-text p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    margin-top: 15px;
+}
+  
+.reset-left {
+    width: 35%;
+    background: linear-gradient(to bottom right, #208E90, #09292A);
+    height: 109vh;
+    color: white;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+  
+  .reset-form {
+    width: 65%;
+    height: 109vh;
+    background-color: #f9f9f9;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .reset-progress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    /* font-weight: bold; */
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    width: 590px;
+    padding: 0.75rem;
+    outline: none;
+    border: 1px solid #D9D9D9;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  
+  .new-form-button{
+    padding: 0.75rem 1.5rem;
+    background-color: #0d9488;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 590px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  
+  .email-form__button:hover {
+    background-color: #0f766e;
+  }
+
+  .error-text {
+    color: red;
+    font-size: 0.875rem;
+    margin-top: 4px;
+  }
+  
