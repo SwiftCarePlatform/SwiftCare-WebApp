@@ -8,7 +8,7 @@ createRoot(document.getElementById('root')).render(
  
 
   <StrictMode>
-  <BrowserRouter basename="/SwiftCare-WebApp">
+  <BrowserRouter>
     <UserProvider>
       <App />
     </UserProvider>
