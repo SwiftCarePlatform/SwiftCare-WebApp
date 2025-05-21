@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "./ForgotPassword.css";
-import forgotImage from "../assets/forgotpassword.png";
+import forgotImage from "../assets/ForgotPass.png";
 
 function EmailForm({ onNext }) {
   const [email, setEmail] = useState("");
